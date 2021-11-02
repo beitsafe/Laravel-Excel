@@ -19,7 +19,7 @@
   ],
   "require": {
     "php": ">=5.5",
-    "phpoffice/phpexcel": "^1.8.1",
+    "phpoffice/phpexcel": "dev-beat",
     "illuminate/cache": "^5.0",
     "illuminate/config": "^5.0",
     "illuminate/filesystem": "^5.0",
@@ -54,13 +54,19 @@
     ]
   },
   "extra": {
-        "laravel": {
-            "providers": [
-                "Maatwebsite\\Excel\\ExcelServiceProvider"
-            ],
-            "aliases": {
-                "Excel": "Maatwebsite\\Excel\\Facades\\Excel"
-            }
-        }
+    "laravel": {
+      "providers": [
+        "Maatwebsite\\Excel\\ExcelServiceProvider"
+      ],
+      "aliases": {
+        "Excel": "Maatwebsite\\Excel\\Facades\\Excel"
+      }
     }
+  },
+  "repositories": {
+    "phpexcel": {
+      "type": "vcs",
+      "url": "https://github.com/beitsafe/PHPExcel"
+    }
+  }
 }
